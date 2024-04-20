@@ -1,0 +1,5 @@
+# Visit https://docs.rilldata.com/reference/project-files/sources to learn more about Rill source files.
+
+type: "postgres"
+database_url: "postgresql://localhost:5432/playground?user=postgres&password=P@$$w0rd!1"
+sql: "select * from public.superstore"

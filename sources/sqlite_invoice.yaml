@@ -1,0 +1,4 @@
+# Visit https://docs.rilldata.com/reference/project-files/sources to learn more about Rill source files.
+
+type: "duckdb"
+sql: "SELECT * FROM sqlite_scan('/Users/apple/Library/DBeaverData/workspace6/.metadata/sample-database-sqlite-1/Chinook.db', 'Invoice');"

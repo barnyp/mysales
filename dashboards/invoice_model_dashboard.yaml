@@ -1,0 +1,95 @@
+# Visit https://docs.rilldata.com/reference/project-files to learn more about Rill project files.
+# This file was generated using AI.
+
+title: Metrics for Invoice Data Analysis
+model: invoice_model
+timeseries: InvoiceDate
+dimensions:
+  - label: Billingaddress
+    column: BillingAddress
+    description: ""
+  - label: Billingcity
+    column: BillingCity
+    description: ""
+  - label: Billingstate
+    column: BillingState
+    description: ""
+  - label: Billingcountry
+    column: BillingCountry
+    description: ""
+  - label: Billingpostalcode
+    column: BillingPostalCode
+    description: ""
+measures:
+  - name: average_total
+    label: Average Total Amount
+    expression: AVG(Total)
+    description: Calculates the average total amount of invoices.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_sales
+    label: Total Sales
+    expression: SUM(Total)
+    description: Calculates the total sales amount.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_invoices
+    label: Total Invoices
+    expression: COUNT(InvoiceId)
+    description: Counts the total number of invoices.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: min_total
+    label: Minimum Total Amount
+    expression: MIN(Total)
+    description: Calculates the minimum total amount in invoices.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: max_total
+    label: Maximum Total Amount
+    expression: MAX(Total)
+    description: Calculates the maximum total amount in invoices.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_total_per_invoice
+    label: Average Total Amount per Invoice
+    expression: AVG(Total)
+    description: Calculates the average total amount per invoice.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_total_per_customer
+    label: Average Total Amount per Customer
+    expression: AVG(Total)
+    description: Calculates the average total amount per customer.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_customers
+    label: Total Customers
+    expression: COUNT(DISTINCT CustomerId)
+    description: Counts the total number of unique customers.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_total_per_country
+    label: Average Total Amount per Country
+    expression: AVG(Total)
+    description: Calculates the average total amount per country.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_sales_percent_of_total
+    label: Total Sales as % of Total
+    expression: SUM(Total)
+    description: Calculates the total sales amount as a percentage of the total.
+    format_preset: humanize
+    valid_percent_of_total: true
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney
